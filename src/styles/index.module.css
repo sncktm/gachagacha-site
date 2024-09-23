@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  margin-top: 0%;
+  margin-bottom: 50px;
+}
+
+.top {
+  background-image: url(/images/top.png);
+  background-size: cover;
+  margin: 70px 70px;
+  border-radius: 50px; /*角を丸くする*/
+  /* height: 800px;
+          width: 1700px; */
+  height: 800px;
+  width: 91.9%;
+  color: #fff;
+}
+
+.top h1 {
+  font-size: 200px;
+  margin: 0%;
+  padding-top: 570px;
+  text-align: center;
+}
