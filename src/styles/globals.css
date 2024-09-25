@@ -18,6 +18,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url(/images/backImage.png);
+  background-repeat: repeat;
+  background-size: 40%;
+  color: #444;
+  margin: 0%;
+  padding: 0%;
+  text-align: center;
 }
 
 @layer utilities {

@@ -1,32 +1,20 @@
-.slide28 {
-  display: flex;
-  justify-content: center;
+.div {
+  width: 90%;
 }
-
-.slide28 ul {
-  position: relative;
-}
-.slide28 li {
-  position: absolute;
-  /* width: 100%; */
-  list-style: none; /*リストの点を削除*/
-}
-.div28 {
-  height: 400px;
-}
-h2 {
-  margin: auto;
+.h {
+  margin: 0px;
   width: 50%;
   color: #fff;
   font-size: 100px;
   position: relative;
   top: 90px;
-  left: 0.4%;
+  left: 25%;
 }
-.div28 img {
+.image {
   border-radius: 100px; /*角を丸くする*/
-  margin: 10px;
+  margin: auto;
   border: 15px solid #fff;
   position: relative;
   right: 15px;
+  height: 300px;
 }

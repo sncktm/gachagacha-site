@@ -1,54 +1,42 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import cx from "classnames";
 import styles from "./menu.module.css";
 
 export default function Menu() {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  const closeMenu = () => {
-    setIsActive(false);
-  };
+  const [isOpen, setOpen] = useState<boolean>(false);
+  const open = () => setOpen(true);
 
   return (
     <div>
-      <div
-        className={styles.openBtn + (isActive ? ` ${styles.active}` : "")}
-        onClick={toggleMenu}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="nav" className={isActive ? styles.panelActive : ""}>
+      <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul>
           <li>
-            <Link href="/" onClick={closeMenu}>
-              TOP
-            </Link>
+            <Link href="/">TOP</Link>
           </li>
           <li>
-            <Link href="/items" onClick={closeMenu}>
-              ITEM
-            </Link>
+            <Link href="/item">ITEM</Link>
           </li>
           <li>
-            <Link href="/form" onClick={closeMenu}>
-              FORM
-            </Link>
+            <Link href="/form">FORM</Link>
           </li>
         </ul>
+        <button className={cx(styles.button, styles.close)}>
+          <Image
+            src="/images/closeMenu.png"
+            alt="close"
+            width={30}
+            height={30}
+            priority
+          />
+        </button>
       </nav>
-      <div
-        className={
-          styles.circleBg + (isActive ? ` ${styles.circleActive}` : "")
-        }
-      ></div>
+      <button className={styles.button} onClick={open}>
+        <Image src="/images/openMenu.png" alt="open" width={30} height={30} />
+      </button>
     </div>
   );
 }

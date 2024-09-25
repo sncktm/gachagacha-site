@@ -1,6 +1,7 @@
 import styles from "../styles/index.module.css";
 import { Spot } from "../components/Spot/spot";
 import Aside from "../components/Aside/aside";
+import Header from "@/components/Header/header";
 
 type Spot = {
   id: string;
@@ -9,9 +10,10 @@ type Spot = {
   spotType: string;
 };
 
-// type Props = {
-//   spots: Spots[];
-// };
+type SliderImage = {
+  id: string;
+  image: string;
+};
 
 const spots: Spot[] = [
   {
@@ -55,6 +57,7 @@ const spots: Spot[] = [
 export default function Home() {
   return (
     <div>
+      <Header />
       <div className={styles.top}>
         <h1>GACHAGACHA</h1>
       </div>

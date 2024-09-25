@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
+    "classnames": "^2.5.1",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "microcms-js-sdk": "^3.1.0",

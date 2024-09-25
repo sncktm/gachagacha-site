@@ -1,16 +1,25 @@
-// import { getItemList } from "../libs/microcms";
-// import Hero from "../components/Hero/hero";
+import Hero from "../components/Hero/hero";
+import Image from "next/image";
 import { getItemList } from "@/libs/microcms";
-import { useEffect, useState } from "react";
 
-export default async function item() {
-  // const [state, setState] = useState(null);
-  //   const data = await getItemList();
-  //   console.log(data);
-  //   const [data, setData] = useState<any>(null);
-  //   useEffect(() => {
-  //     const res = getItemList();
-  //     setData(res)
-  //   },[])
-  return <div>{/* <Hero title="ITEM" /> */}</div>;
+export default async function Item() {
+  const data = await getItemList();
+
+  return (
+    <div>
+      {/* <Hero /> */}
+      <ul>
+        {data.contents.map((item) => {
+          return (
+            <li key={item.id}>
+              <Image src={item.image.url} alt={item.title}></Image>
+              <h4>{item.title}</h4>
+              <p>{item.price}</p>
+              <p>{item.releaseDate}</p>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
