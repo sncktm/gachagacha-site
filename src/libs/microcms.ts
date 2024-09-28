@@ -1,13 +1,17 @@
 import { createClient } from "microcms-js-sdk";
 
-import type { MicroCMSQueries, MicroCMSImage } from "microcms-js-sdk";
+import type {
+  MicroCMSQueries,
+  MicroCMSImage,
+  MicroCMSListContent,
+} from "microcms-js-sdk";
 
 export type Item = {
   title: string;
   image: MicroCMSImage;
   price: number;
   releaseDate: string;
-};
+} & MicroCMSListContent;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error("MICROCMS_SERVICE_DOMAIN is required");
