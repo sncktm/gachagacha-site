@@ -18,10 +18,10 @@ export default function Item() {
   return (
     <div>
       <Hero title="ITEM" />
-      <ul>
+      <ul className={styles.itemList}>
         {data.map((item) => {
           return (
-            <li key={item.title}>
+            <li key={item.title} className={styles.item}>
               <Image
                 src={item.image.url}
                 alt={item.title}
@@ -29,7 +29,7 @@ export default function Item() {
                 height={200}
               ></Image>
               <h4>{item.title}</h4>
-              <p>{item.price}</p>
+              <p>{item.price}円</p>
               <p>{item.releaseDate}</p>
             </li>
           );
