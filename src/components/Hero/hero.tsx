@@ -8,14 +8,16 @@ type Props = {
 export default function Hero({ title }: Props) {
   return (
     <div className={styles.div}>
-      <Image
-        className={styles.image}
-        src="/images/gacha2.jpg"
-        width={1300}
-        height={300}
-        alt=""
-      />
-      <h2 className={styles.h}>{title}</h2>
+      <div className={styles.top}>
+        <Image
+          className={styles.image}
+          src="/images/gacha2.jpg"
+          width={1300}
+          height={300}
+          alt={title}
+        />
+        <h2 className={styles.h}>{title}</h2>
+      </div>
     </div>
   );
 }

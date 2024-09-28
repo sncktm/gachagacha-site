@@ -1,4 +1,6 @@
 import Image from "next/image";
+import styles from "./spot.module.css";
+import { useState } from "react";
 
 type Spot = {
   id: string;
@@ -6,77 +8,96 @@ type Spot = {
   image: string;
   spotType: string;
 };
-
-type Props = {
-  spots: Spot[];
-};
-
-export function Spot({ spots }: Props) {
+const spotArray: Spot[] = [
+  {
+    id: "1",
+    name: "マンガ倉庫 鹿児島店",
+    image: "/images/manga.png",
+    spotType: "city",
+  },
+  {
+    id: "2",
+    name: "センテラス天文館",
+    image: "/images/senterasu.png",
+    spotType: "city",
+  },
+  {
+    id: "3",
+    name: "ビックカメラ鹿児島中央駅店",
+    image: "",
+    spotType: "city",
+  },
+  {
+    id: "4",
+    name: "アミュプラザ鹿児島",
+    image: "/images/amu.png",
+    spotType: "city",
+  },
+  {
+    id: "5",
+    name: "イオンタウン姶良",
+    image: "/images/aira.png",
+    spotType: "outside",
+  },
+  {
+    id: "6",
+    name: "サンキュー隼人店",
+    image: "",
+    spotType: "outside",
+  },
+];
+function Spot() {
+  const spotTypes = Array.from(new Set(spotArray.map((spot) => spot.spotType)));
+  const [selectedTab, setSelectedTab] = useState<string>(spotTypes[0]);
+  const [spots, setSpots] = useState<Spot[]>(
+    spotArray.filter(({ spotType }) => spotType === selectedTab)
+  );
+  const selectTab = (e: any) => {
+    const selectSpotType = e.target.value;
+    setSelectedTab(selectSpotType);
+    const filteredSpots = spotArray.filter(
+      ({ spotType }) => spotType === selectSpotType
+    );
+    setSpots(filteredSpots);
+  };
   if (spots.length === 0) {
     return <p>SPOTがありません。</p>;
   }
-
   return (
-    <section id="sec2">
-      <ul className="tab">
-        <li>
-          <a href="#tab1" className="current2">
-            city
-          </a>
-        </li>
-        <li>
-          <a href="#tab2">outside</a>
-        </li>
+    <section className={styles.sec2}>
+      <ul className={styles.tab}>
+        {spotTypes.map((spot) => (
+          <li>
+            <button
+              className={selectedTab === spot ? styles.current : ""}
+              value={spot}
+              onClick={selectTab}
+            >
+              {spot}
+            </button>
+          </li>
+        ))}
       </ul>
-
-      <div id="sec2contents">
+      <div className={styles.sec2contents}>
         <div className="sec2aside">
           <div className="sec2_sticky">
             <h3>RECOMMENDATION GACHAGACHA SPOT</h3>
           </div>
         </div>
-
         <div className="sec2article">
-          <article id="tab1">
-            <div className="tab0">
-              {spots.map((spot) =>
-                spot.spotType === "city" ? (
-                  <div className="spot" key={spot.id}>
-                    <h4>{spot.name}</h4>
-                    <ul>
-                      <li>
-                        <Image
-                          src={spot.image}
-                          alt=""
-                          width={300}
-                          height={300}
-                        />
-                      </li>
-                    </ul>
-                  </div>
-                ) : null
-              )}
-            </div>
-          </article>
-          <article id="tab2">
-            <div className="tab0">
-              {spots.map((spot) =>
-                spot.spotType === "outside" ? (
-                  <div className="spot" key={spot.id}>
-                    <h4>{spot.name}</h4>
-                    <ul>
-                      <li>
-                        <Image
-                          src={spot.image}
-                          alt=""
-                          width={300}
-                          height={300}
-                        />
-                      </li>
-                    </ul>
-                  </div>
-                ) : null
-              )}
+          <article id="tab1" className={styles.article}>
+            <div className={styles.spots}>
+              {spots.map((spot) => (
+                <div className={styles.spot} key={spot.id}>
+                  <h4>{spot.name}</h4>
+                  <Image
+                    src={spot.image}
+                    alt={spot.name}
+                    width={300}
+                    height={300}
+                  />
+                </div>
+              ))}
             </div>
           </article>
         </div>
@@ -84,3 +105,4 @@ export function Spot({ spots }: Props) {
     </section>
   );
 }
+export default Spot;

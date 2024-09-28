@@ -1,0 +1,77 @@
+/*--画面の2分割--*/
+.sec2 {
+  border-radius: 50px 50px 0px 0px; /*角を丸くする*/
+  background-color: #f79fcb;
+  padding: 20px 0px 40px 80px;
+  margin: 0px;
+}
+.sec2contents {
+  display: flex;
+  margin-top: 76px;
+}
+/*メイン部分*/
+.sec2article {
+  width: 75%;
+  background-color: #f79fcb;
+}
+
+/* タブ部分 */
+.tab li {
+  float: left;
+  margin-right: 1px;
+  list-style-type: none;
+  position: relative;
+  left: 300px;
+  top: ;
+}
+
+.tab button {
+  border-radius: 100px 100px 0px 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd5eb;
+  text-decoration: none;
+  display: block;
+  width: 100px;
+  padding: 15px 20px;
+  background: #ff6ebb;
+}
+
+.tab button:hover {
+  background: #ff8ac8;
+  color: #fff;
+}
+
+.current {
+  background: #ffd1e9 !important;
+  color: #333 !important;
+}
+
+/*画像と地図*/
+
+.spots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #ffd1e9;
+  border-radius: 20px;
+}
+
+.spot {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: #f79fcb solid 3px;
+  background-color: #fff;
+  border-radius: 20px; /*角を丸くする*/
+}
+
+/**/
+.sec2article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.spot {
+  margin: 30px;
+}

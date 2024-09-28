@@ -1,20 +1,25 @@
 .div {
-  width: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.h {
-  margin: 0px;
-  width: 50%;
-  color: #fff;
-  font-size: 100px;
+
+.top {
   position: relative;
-  top: 90px;
-  left: 25%;
+  width: 95%;
+  text-align: center;
 }
+
 .image {
   border-radius: 100px; /*角を丸くする*/
   margin: auto;
-  border: 15px solid #fff;
-  position: relative;
-  right: 15px;
-  height: 300px;
+}
+
+.h {
+  position: absolute;
+  font-size: 190px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
