@@ -4,21 +4,29 @@
   margin-bottom: 50px;
 }
 
-.top {
-  background-image: url(/images/top.png);
-  background-size: cover;
-  margin: 70px 70px;
-  border-radius: 50px; /*角を丸くする*/
-  /* height: 800px;
-          width: 1700px; */
-  height: 800px;
-  width: 91.9%;
-  color: #fff;
+.topDiv {
+  /* margin: 0 auto; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.top h1 {
-  font-size: 200px;
-  margin: 0%;
-  padding-top: 570px;
+.top {
+  position: relative;
+  width: 95%;
   text-align: center;
+}
+
+.topImage {
+  border-radius: 50px;
+  margin: auto;
+}
+
+.topTitle {
+  position: absolute;
+  font-size: 190px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

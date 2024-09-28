@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./header.module.css";
-import Menu from "../Menu/menu";
+import Burger from "../Burger/burger";
 
 export default function Header() {
   return (
@@ -15,7 +15,7 @@ export default function Header() {
           height={133}
         />
       </Link>
-      <Menu />
+      <Burger />
     </header>
   );
 }

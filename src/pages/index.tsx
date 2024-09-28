@@ -1,7 +1,8 @@
 import styles from "../styles/index.module.css";
 import { Spot } from "../components/Spot/spot";
 import Aside from "../components/Aside/aside";
-import Header from "@/components/Header/header";
+import Collection from "@/components/Collection/collection";
+import Image from "next/image";
 
 type Spot = {
   id: string;
@@ -57,15 +58,24 @@ const spots: Spot[] = [
 export default function Home() {
   return (
     <div>
-      <Header />
-      <div className={styles.top}>
-        <h1>GACHAGACHA</h1>
+      <div className={styles.topDiv}>
+        <div className={styles.top}>
+          <Image
+            className={styles.topImage}
+            src="/images/top.png"
+            width={1700}
+            height={800}
+            alt="TOP画像"
+          />
+          <h1 className={styles.topTitle}>GACHAGACHA</h1>
+        </div>
       </div>
+
       {/* <Slider /> */}
       <div className="main">
         <article>
           <Spot spots={spots} />
-          {/* <Collection /> */}
+          <Collection />
         </article>
 
         <aside>
