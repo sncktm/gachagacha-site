@@ -67,39 +67,38 @@ function Spot() {
     <section className={styles.sec2}>
       <ul className={styles.tab}>
         {spotTypes.map((spot) => (
-          <li>
-            <button
-              className={selectedTab === spot ? styles.current : ""}
-              value={spot}
-              onClick={selectTab}
-            >
-              {spot}
-            </button>
-          </li>
+          <button
+            key={spot}
+            className={selectedTab === spot ? styles.current : ""}
+            value={spot}
+            onClick={selectTab}
+          >
+            {spot}
+          </button>
         ))}
       </ul>
       <div className={styles.sec2contents}>
-        <div className="sec2aside">
-          <div className="sec2_sticky">
-            <h3>RECOMMENDATION GACHAGACHA SPOT</h3>
-          </div>
+        <div className={styles.sec2aside}>
+          <h3>
+            RECOMMENDATION
+            <br />
+            GACHAGACHA SPOT
+          </h3>
         </div>
-        <div className="sec2article">
-          <article id="tab1" className={styles.article}>
-            <div className={styles.spots}>
-              {spots.map((spot) => (
-                <div className={styles.spot} key={spot.id}>
-                  <h4>{spot.name}</h4>
-                  <Image
-                    src={spot.image}
-                    alt={spot.name}
-                    width={300}
-                    height={300}
-                  />
-                </div>
-              ))}
-            </div>
-          </article>
+        <div className={styles.sec2article}>
+          <div className={styles.spots}>
+            {spots.map((spot) => (
+              <div className={styles.spot} key={spot.id}>
+                <h4>{spot.name}</h4>
+                <Image
+                  src={spot.image}
+                  alt={spot.name}
+                  width={300}
+                  height={300}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
