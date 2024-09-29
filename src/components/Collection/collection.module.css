@@ -1,94 +1,43 @@
-#sec3 {
-  background-color: #ff9fb4;
-  padding-bottom: 10px;
-  /* height: 600px; */
-}
-#sec3 h3 {
-  margin: 0%;
-  padding: 60px 0px 40px 0px;
-}
-
-dl {
-  height: 500px;
-  /* margin-bottom: 200px; */
-  display: flex;
-  justify-content: center;
-}
-dt {
-  float: left;
-}
-
-dd {
-  float: left;
-  width: 1100px;
-  height: 500px;
-  overflow: hidden;
-  margin: 0%;
-  display: flex;
-}
-
-dt a {
-  text-align: center;
-  display: block;
-  padding: 20px 0;
-  width: 50px;
-  height: 460px;
-  color: #000;
-  text-decoration: none;
-}
-
-dt a:hover {
-  background: #fcb6c3;
-}
-
-dd p {
-  padding: 20px;
-  width: 740px;
-}
-
-dt:nth-of-type(1),
-dd:nth-of-type(1) {
-  background: #ffdae0;
-}
-
-dt:nth-of-type(2),
-dd:nth-of-type(2) {
-  background: #fee2e7;
-}
-
-dt:nth-of-type(3),
-dd:nth-of-type(3) {
-  background: #ffebef;
-}
-
-/* .collection{
-    background-image: url(/img/nami2.png);
-    background-size: cover;
-    display: flex;
-    overflow: hidden;
-    padding: 50px 0px 100px 0px;
-    overflow-x: auto;
-    white-space: nowrap;
-} */
-
-.sonota {
-  display: flex;
-  margin: 20px;
-  padding: 0px 30px;
+.sec3 {
+  background-color: #ffebef;
+  padding: 30px;
+  padding-bottom: 100px;
 }
 
 .text {
-  text-align: center;
-  position: relative;
-  top: 90px;
-  right: 90px;
+  background-color: #ffebef;
+  border-radius: 20px;
+  position: absolute;
+  top: 250px;
+  padding: 100px 15px;
+}
+.textLeft {
+  left: 300px;
+}
+.textRight {
+  right: 300px;
 }
 
-dd img {
-  padding: 20px 0px 20px 20px;
-  margin-top: 30px;
-  border-radius: 10px; /*角を丸くする*/
-}
-dd h4 {
+.dd h4 {
   font-size: 30px;
+}
+
+.nami {
+  background-image: url(/images/nami.png);
+  background-size: cover;
+  height: 130px;
+}
+
+.collection {
+  display: flex;
+  position: relative;
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.image {
+  border-radius: 20px;
+  margin: 20px;
+  border: 5px solid #f79fcb;
 }
