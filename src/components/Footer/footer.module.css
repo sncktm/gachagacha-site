@@ -1,9 +1,9 @@
-footer {
+.footer {
   margin: 0px;
-  background: #ff8ac8;
+  background: #f79fcb;
   text-align: center; /*中央寄せ*/
-  padding: 40px 0;
+  padding: 50px 0;
 }
-footer p {
+.footer p {
   color: #fff;
 }

@@ -43,7 +43,7 @@ export default function Burger() {
         anchor="right"
         open={isOpen}
         onClose={toggleDrawer(false)}
-        PaperProps={{ style: { width: "20%" } }}
+        PaperProps={{ style: { width: "20%", backgroundColor: "#FFE8EC" } }}
       >
         <List onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
           <ListItem button>

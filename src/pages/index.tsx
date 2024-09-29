@@ -31,10 +31,6 @@ export default function Home() {
           <Spot />
           <Collection />
         </article>
-
-        <aside>
-          <Aside />
-        </aside>
       </div>
     </div>
   );
