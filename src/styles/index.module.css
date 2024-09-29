@@ -19,13 +19,14 @@
 .topImage {
   border-radius: 50px;
   margin: auto;
+  height: 88%;
 }
 
 .topTitle {
   position: absolute;
-  font-size: 190px;
+  font-size: 180px;
   color: #fff;
-  top: 50%;
-  left: 50%;
+  top: 78%;
+  left: 49.5%;
   transform: translate(-50%, -50%);
 }

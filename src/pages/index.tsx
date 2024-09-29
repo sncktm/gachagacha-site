@@ -1,13 +1,8 @@
 import styles from "../styles/index.module.css";
 import Spot from "../components/Spot/spot";
-import Aside from "../components/Aside/aside";
+import Slider from "../components/Slider/slider";
 import Collection from "@/components/Collection/collection";
 import Image from "next/image";
-
-type SliderImage = {
-  id: string;
-  image: string;
-};
 
 export default function Home() {
   return (
@@ -25,7 +20,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <Slider /> */}
+      <Slider />
       <div className="main">
         <article>
           <Spot />
