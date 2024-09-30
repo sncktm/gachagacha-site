@@ -40,7 +40,7 @@ const sliderImages3: SliderImage[] = [
 
 const allImages = [
   { images: sliderImages1, reverse: false },
-  { images: sliderImages2, reverse: true }, // このスライダーだけ逆回転
+  { images: sliderImages2, reverse: true },
   { images: sliderImages3, reverse: false },
 ];
 
@@ -77,7 +77,7 @@ export default function ImagesSlider() {
       {allImages.map((allImage, index) => {
         const settings = {
           ...baseSettings,
-          rtl: allImage.reverse, // `group.reverse` が true のときに逆回転
+          rtl: allImage.reverse,
         };
 
         return (

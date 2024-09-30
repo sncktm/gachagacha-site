@@ -3,6 +3,7 @@ import Spot from "../components/Spot/spot";
 import Slider from "../components/Slider/slider";
 import Collection from "@/components/Collection/collection";
 import Image from "next/image";
+import Button from "@/components/Button/button";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       </div>
 
       <Slider />
+      <Button name="item" title="more" />
       <div className="main">
         <article>
           <Spot />
