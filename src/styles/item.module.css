@@ -3,6 +3,8 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 0%;
+  max-width: 95%;
+  margin: auto;
 }
 .item {
   background-color: #fff;
@@ -12,4 +14,10 @@
   border-style: solid;
   border-radius: 10px;
   border-color: #ffe8ec;
+  width: 300px;
+}
+
+.item h4 {
+  word-wrap: break-word; /* 長い単語を途中で折り返す */
+  white-space: normal; /* テキストが自動的に改行されるようにする */
 }

@@ -1,25 +1,23 @@
-.div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .top {
   position: relative;
-  width: 95%;
-  text-align: center;
+  height: 40%;
+  margin: auto;
 }
 
 .image {
-  border-radius: 100px; /*角を丸くする*/
+  width: 100%; /* 親要素に合わせる */
+  height: auto; /* 高さは自動調整 */
+  max-width: 500px; /* 最大幅を500pxに制限 */
+  border-radius: 80px; /* 角を丸くする */
+  border: 15px solid #fff;
   margin: auto;
 }
 
 .h {
   position: absolute;
-  font-size: 190px;
+  font-size: 100px;
   color: #fff;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
