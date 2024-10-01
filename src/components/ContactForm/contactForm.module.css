@@ -1,0 +1,33 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 800px;
+}
+.field {
+  color: #1f2937; /* text-gray-800: #1f2937（暗いグレー） */
+  border-radius: 1rem; /* rounded-md: 6pxの角丸 */
+  border: 2px solid #f79fcb;
+  padding: 0.5rem 0.75rem;
+}
+.messagefield {
+  height: 200px !important;
+  border-radius: 1rem; /* rounded-md: 6pxの角丸 */
+  border: 2px solid #f79fcb;
+  padding: 0.5rem 0.75rem;
+}
+
+.button {
+  background-color: #f79fcb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 1.5rem;
+}
+
+.button:hover {
+  background-color: #ff8ac8;
+}
+
+.button:disabled {
+  background-color: #d1d5db;
+}

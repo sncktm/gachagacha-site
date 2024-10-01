@@ -43,72 +43,67 @@ export default function ContactForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(handleOnSubmit)}>
-      <div className={styles.item}>
-        <label className={styles.label} htmlFor="name">
-          名前
-        </label>
-        <input
-          {...register("name")}
-          className={styles.textfield}
-          type="text"
-          id="name"
-          name="name"
-          placeholder="山田　太郎"
-        />
-        {formError.name && (
-          <div className="text-red-500 pl-1 pt-1 text-xs">
-            {formError.name.message}
-          </div>
-        )}
+      <div>
+        <div className={styles.item}>
+          <label className={styles.label} htmlFor="name">
+            名前
+          </label>
+          <input
+            {...register("name")}
+            className={styles.field}
+            type="text"
+            id="name"
+            name="name"
+            placeholder="山田　太郎"
+          />
+          {formError.name && (
+            <div className="text-red-500 pl-1 pt-1 text-xs">
+              {formError.name.message}
+            </div>
+          )}
+        </div>
+
+        <div className={styles.item}>
+          <label className={styles.label}>Email</label>
+          <input
+            type="text"
+            {...register("email")}
+            className={styles.field}
+            placeholder="xxx@gmail.com"
+          />
+          {formError.email && (
+            <div className="text-red-500 pl-1 pt-1 text-xs">
+              {formError.email.message}
+            </div>
+          )}
+        </div>
+
+        <div className={styles.item}>
+          <label className={styles.label} htmlFor="message">
+            お問い合わせ内容
+          </label>
+          <textarea
+            {...register("message")}
+            className={styles.messagefield}
+            id="message"
+            name="message"
+          ></textarea>
+
+          {formError.message && (
+            <div className="text-red-500 pl-1 pt-1 text-xs">
+              {formError.message.message}
+            </div>
+          )}
+        </div>
+
+        <button
+          type="submit"
+          disabled={!isValid || isSubmitting}
+          className={styles.button}
+        >
+          送信する
+        </button>
       </div>
-
-      <label className="flex flex-col space-y-1">
-        <div className="text-sm font-bold mb-1">Email</div>
-        <input
-          type="text"
-          {...register("email")}
-          className="text-gray-800 mt-4 rounded-md border py-2 px-3"
-          placeholder="xxx@gmail.com"
-        />
-        {formError.email && (
-          <div className="text-red-500 pl-1 pt-1 text-xs">
-            {formError.email.message}
-          </div>
-        )}
-      </label>
-
-      <div className={styles.item}>
-        <label className={styles.label} htmlFor="message">
-          お問い合わせ内容
-        </label>
-        <textarea
-          {...register("message")}
-          className={styles.textfield}
-          id="message"
-          name="message"
-        ></textarea>
-
-        {formError.message && (
-          <div className="text-red-500 pl-1 pt-1 text-xs">
-            {formError.message.message}
-          </div>
-        )}
-      </div>
-
-      {/* <div className={styles.actions}>
-        {state.status === "error" && (
-          <p className={styles.error}>{state.message}</p>
-        )}
-        <input type="submit" value="送信する" className={styles.button} />
-      </div> */}
-
-      <button
-        type="submit"
-        disabled={!isValid || isSubmitting}
-        className="bg-white rounded px-4 py-2 disabled:bg-gray-300 md:self-center"
-      >
-        送信する
-      </button>
     </form>
   );
 }
