@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import {
   Drawer,
   List,
-  ListItem,
+  ListItemButton,
   ListItemText,
   IconButton,
 } from "@mui/material";
@@ -28,7 +28,6 @@ export default function Burger() {
 
   return (
     <div>
-      {/* ハンバーガーメニューボタン */}
       <IconButton
         edge="start"
         color="inherit"
@@ -38,7 +37,6 @@ export default function Burger() {
         <MenuIcon fontSize="large" />
       </IconButton>
 
-      {/* ドロワー (サイドメニュー) */}
       <Drawer
         anchor="right"
         open={isOpen}
@@ -46,26 +44,26 @@ export default function Burger() {
         PaperProps={{ style: { width: "20%", backgroundColor: "#FFE8EC" } }}
       >
         <List onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-          <ListItem button>
+          <ListItemButton>
             <Link href="/" passHref>
               <ListItemText primary={<CloseIcon />} />
             </Link>
-          </ListItem>
-          <ListItem button>
+          </ListItemButton>
+          <ListItemButton>
             <Link href="/" passHref>
               <ListItemText primary="TOP" />
             </Link>
-          </ListItem>
-          <ListItem button>
+          </ListItemButton>
+          <ListItemButton>
             <Link href="/item" passHref>
               <ListItemText primary="ITEM" />
             </Link>
-          </ListItem>
-          <ListItem button>
+          </ListItemButton>
+          <ListItemButton>
             <Link href="/form" passHref>
               <ListItemText primary="FORM" />
             </Link>
-          </ListItem>
+          </ListItemButton>
         </List>
       </Drawer>
     </div>

@@ -52,8 +52,8 @@ function Spot() {
   const [spots, setSpots] = useState<Spot[]>(
     spotArray.filter(({ spotType }) => spotType === selectedTab)
   );
-  const selectTab = (e: any) => {
-    const selectSpotType = e.target.value;
+  const selectTab = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const selectSpotType = e.currentTarget.value;
     setSelectedTab(selectSpotType);
     const filteredSpots = spotArray.filter(
       ({ spotType }) => spotType === selectSpotType
