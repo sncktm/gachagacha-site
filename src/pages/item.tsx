@@ -7,7 +7,9 @@ export default function Item() {
   const [data, setData] = useState<ItemType[]>([]);
   useEffect(() => {
     const fetchItemList = async () => {
-      const itemList = await fetch("http://localhost:3000/api/getContent")
+      const itemList = await fetch(
+        "https://gachagacha-site.vercel.app/api/getContent"
+      )
         .then((res) => res.json())
         .then((res) => res.contents);
       console.log(itemList);
