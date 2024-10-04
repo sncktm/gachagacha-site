@@ -44,26 +44,26 @@ export default function Burger() {
         PaperProps={{ style: { width: "20%", backgroundColor: "#FFE8EC" } }}
       >
         <List onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-          <ListItemButton>
-            <Link href="/" passHref>
+          <Link href="/" passHref>
+            <ListItemButton>
               <ListItemText primary={<CloseIcon />} />
-            </Link>
-          </ListItemButton>
+            </ListItemButton>
+          </Link>
           <ListItemButton>
             <Link href="/" passHref>
               <ListItemText primary="TOP" />
             </Link>
           </ListItemButton>
-          <ListItemButton>
-            <Link href="/item" passHref>
+          <Link href="/item" passHref>
+            <ListItemButton>
               <ListItemText primary="ITEM" />
-            </Link>
-          </ListItemButton>
-          <ListItemButton>
-            <Link href="/form" passHref>
+            </ListItemButton>
+          </Link>
+          <Link href="/form" passHref>
+            <ListItemButton>
               <ListItemText primary="FORM" />
-            </Link>
-          </ListItemButton>
+            </ListItemButton>
+          </Link>
         </List>
       </Drawer>
     </div>
