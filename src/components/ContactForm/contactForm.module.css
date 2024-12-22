@@ -31,3 +31,10 @@
 .button:disabled {
   background-color: #d1d5db;
 }
+
+.errorText {
+  color: red;
+  padding-left: 0.25rem;
+  padding-top: 0.25rem;
+  font-size: 0.75rem;
+}

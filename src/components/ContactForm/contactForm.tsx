@@ -57,9 +57,7 @@ export default function ContactForm() {
             placeholder="山田　太郎"
           />
           {formError.name && (
-            <div className="text-red-500 pl-1 pt-1 text-xs">
-              {formError.name.message}
-            </div>
+            <div className={styles.errorText}>{formError.name.message}</div>
           )}
         </div>
 
@@ -72,9 +70,7 @@ export default function ContactForm() {
             placeholder="xxx@gmail.com"
           />
           {formError.email && (
-            <div className="text-red-500 pl-1 pt-1 text-xs">
-              {formError.email.message}
-            </div>
+            <div className={styles.errorText}>{formError.email.message}</div>
           )}
         </div>
 
@@ -90,9 +86,7 @@ export default function ContactForm() {
           ></textarea>
 
           {formError.message && (
-            <div className="text-red-500 pl-1 pt-1 text-xs">
-              {formError.message.message}
-            </div>
+            <div className={styles.errorText}>{formError.message.message}</div>
           )}
         </div>
 
