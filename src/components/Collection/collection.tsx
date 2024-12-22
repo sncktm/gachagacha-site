@@ -34,7 +34,7 @@ export default function Collection() {
     <>
       <div className={styles.nami} />
       <section className={styles.sec3}>
-        <h3>COLLECTION</h3>
+        <h3 className={styles.title}>COLLECTION</h3>
         <div className={styles.collections}>
           {collections.map((collection) => (
             <div

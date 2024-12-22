@@ -46,6 +46,9 @@ const spotArray: Spot[] = [
     spotType: "outside",
   },
 ];
+
+const defaultImage = "/images/noimage.jpg";
+
 function Spot() {
   const spotTypes = Array.from(new Set(spotArray.map((spot) => spot.spotType)));
   const [selectedTab, setSelectedTab] = useState<string>(spotTypes[0]);
@@ -79,7 +82,7 @@ function Spot() {
       </ul>
       <div className={styles.sec2contents}>
         <div className={styles.sec2aside}>
-          <h3>
+          <h3 className={styles.title}>
             RECOMMENDATION
             <br />
             GACHAGACHA SPOT
@@ -91,7 +94,7 @@ function Spot() {
               <div className={styles.spot} key={spot.id}>
                 <h4>{spot.name}</h4>
                 <Image
-                  src={spot.image}
+                  src={spot.image || defaultImage}
                   alt={spot.name}
                   width={300}
                   height={300}
